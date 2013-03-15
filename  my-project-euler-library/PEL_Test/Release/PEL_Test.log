@@ -1,0 +1,24 @@
+﻿Build started 15-Mar-13 18:46:04.
+     1>Project "D:\Projects\ThirdParty\PEL\PEL_Test\PEL_Test.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\..\UnitTest++\src /I..\PEL /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt TestPrimes.cpp
+         TestPrimes.cpp
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Projects\ThirdParty\PEL\Release\PEL_Test.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\Release\ /LIBPATH:..\..\UnitTest++\Release\ PEL.lib UnitTest++.vsnet2005.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Projects\ThirdParty\PEL\Release\PEL_Test.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Projects\ThirdParty\PEL\Release\PEL_Test.lib" /MACHINE:X86 /SAFESEH Release\PEL_Test.obj
+         Release\stdafx.obj
+         Release\TestPrimes.obj
+         Release\TestLexical.obj
+         Generating code
+         Finished generating code
+         PEL_Test.vcxproj -> D:\Projects\ThirdParty\PEL\Release\PEL_Test.exe
+       PostBuildEvent:
+         ..\Release\PEL_Test.exe t
+         :VCEnd
+         1109
+         1109Success: 3 tests passed.
+         Test time: 0.03 seconds.
+     1>Done Building Project "D:\Projects\ThirdParty\PEL\PEL_Test\PEL_Test.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.25
