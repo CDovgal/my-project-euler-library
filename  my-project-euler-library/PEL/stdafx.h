@@ -16,5 +16,6 @@
 // TODO: reference additional headers your program requires here
 
 #include <algorithm>
+#include <numeric>
 #include <fstream>
 #include <iterator>

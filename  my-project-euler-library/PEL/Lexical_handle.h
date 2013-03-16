@@ -12,5 +12,6 @@ __declspec(dllexport)  std::vector<size_t> get_vector(size_t i_number);
 
 // get number from vector<size_t> presentation
 __declspec(dllexport)  size_t get_number(const std::vector<size_t>& i_v);
-
+/*
 __declspec(dllexport)  std::vector<size_t> get_reverse(const std::vector<size_t>& ret_val);
+*/

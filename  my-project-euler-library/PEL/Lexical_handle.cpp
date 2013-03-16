@@ -6,15 +6,7 @@ using namespace std;
 
 __declspec(dllexport) ostream& operator<< (ostream& i_str, const vector<size_t>& i_v)
   {
-  /*
-  for_each(i_v.begin(), i_v.end(), [&i_str] (size_t i)
-    {
-    cout << i;	
-    });
-  cout << endl;
-  */
   copy(begin(i_v),end(i_v),ostream_iterator<size_t>(i_str,""));
-
   return i_str;
   }
 
@@ -38,30 +30,33 @@ __declspec(dllexport)  vector<size_t> get_vector(size_t i_number)
     i_number /= 10;
     }
 
-  return get_reverse(ret_val);
+  reverse( begin(ret_val),end(ret_val) );
+
+  return ret_val;
   }
 
-__declspec(dllexport)  size_t get_number(const vector<size_t>& i_v)
+__declspec(dllexport)  size_t get_number(const vector<size_t>& i_vector)
   {
-  size_t ret = 0;
-  size_t coeff = 1;
-
-  for(int i = i_v.size()-1; i >= 0 ; --i)
+  size_t sum = 0;
+  size_t powr = 1;
+  
+  for_each(i_vector.rbegin(),i_vector.rend(),[&] (size_t digit)
     {
-    ret += coeff*(i_v[i]);
-    coeff *= 10;
-    }
-
-  return ret;
-  }
-
-__declspec(dllexport)  vector<size_t> get_reverse(const vector<size_t>& ret_val)
-  {
-  vector<size_t> ret;
-  for_each(ret_val.crbegin(), ret_val.crend(), [&ret] (size_t i)
-    {
-    ret.push_back(i);
+//    size_t powr = 1;
+    sum += digit*powr;
+    powr *= 10;
     });
 
-  return ret;
+ return sum;
   }
+/*
+__declspec(dllexport)  vector<size_t> get_reverse(const vector<size_t>& i_vector)
+  {
+  vector<size_t> ret;
+  ret.reserve(i_vector.size());
+
+  copy( begin(ret), end(ret), i_vector.rbegin() );
+  return ret;
+  
+}
+  */
