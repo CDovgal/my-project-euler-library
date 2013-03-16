@@ -19,6 +19,9 @@
     <Filter Include="Lexical">
       <UniqueIdentifier>{690a0a44-8244-492f-a526-354c4cd45a5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{3cfb4dd1-507b-4fa4-918d-e3360b99b1c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -39,6 +42,9 @@
     <ClInclude Include="Lexical_handle.h">
       <Filter>Lexical</Filter>
     </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Util</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -58,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="Lexical_handle.cpp">
       <Filter>Lexical</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Util</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

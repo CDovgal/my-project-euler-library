@@ -20,7 +20,16 @@ __declspec(dllexport) ostream& operator<< (ostream& i_str, const vector<pair<siz
   return i_str;
   }
 
-__declspec(dllexport)  vector<size_t> get_vector(size_t i_number)
+__declspec(dllexport)  vector<size_t> get_vector(unsigned long long i_number)
+  {
+  auto ret_val = get_reverse_vector(i_number);
+
+  reverse( begin(ret_val),end(ret_val) );
+
+  return ret_val;
+  }
+
+__declspec(dllexport)  std::vector<size_t> get_reverse_vector(unsigned long long i_number)
   {
   vector<size_t> ret_val;
 
@@ -30,33 +39,27 @@ __declspec(dllexport)  vector<size_t> get_vector(size_t i_number)
     i_number /= 10;
     }
 
-  reverse( begin(ret_val),end(ret_val) );
-
   return ret_val;
   }
 
-__declspec(dllexport)  size_t get_number(const vector<size_t>& i_vector)
+__declspec(dllexport)  unsigned long long get_number(const vector<size_t>& i_vector)
   {
-  size_t sum = 0;
-  size_t powr = 1;
+  unsigned long long sum  = 0;
+  unsigned long long powr = 1;
   
-  for_each(i_vector.rbegin(),i_vector.rend(),[&] (size_t digit)
+  for_each(i_vector.rbegin(),i_vector.rend(),[&] (unsigned long long digit)
     {
-//    size_t powr = 1;
     sum += digit*powr;
     powr *= 10;
     });
-
+  
  return sum;
   }
-/*
-__declspec(dllexport)  vector<size_t> get_reverse(const vector<size_t>& i_vector)
-  {
-  vector<size_t> ret;
-  ret.reserve(i_vector.size());
 
-  copy( begin(ret), end(ret), i_vector.rbegin() );
-  return ret;
-  
-}
-  */
+__declspec(dllexport)  std::vector<size_t> get_reverse(const std::vector<size_t>& i_v)
+  {
+  auto reverse_vector = i_v;
+  reverse(begin(reverse_vector),end(reverse_vector));
+
+  return reverse_vector;
+  }
